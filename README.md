@@ -4,7 +4,8 @@
 public class Me
 {
     public string Name => "Malthe Bjerregaard Petersen";
-    public CultureInfo Culture => new CultureInfo("da-DK");
+    public CultureInfo Language => new CultureInfo("da");
+    public RegionInfo Country => new RegionInfo("DK");
     
     public string[] GetSoMeAccounts() 
     {
@@ -20,12 +21,12 @@ public class Me
         return "Novicell DK - Aarhus";
     }
     
-    public string[] GetSecondaryLanguages()
+    public CultureInfo[] GetSecondaryLanguages()
     {
-        return new string[]
+        return new CultureInfo[]
         {
-            new CultureInfo("en").DisplayName
-        }
+            new CultureInfo("en")
+        };
     }
 }
 ```
